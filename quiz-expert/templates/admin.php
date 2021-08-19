@@ -50,11 +50,11 @@ $all_quiz = $wpdb->get_results(
                                 <input type="hidden" id="wp_post_id<?php echo esc_attr( $value['quiz_id']); ?>" value="<?php echo esc_attr( $wp_post_id); ?>">
                                 <tr id="quiz_row<?php echo esc_attr( $value['quiz_id']); ?>">
                                     <td class="column-author"><?php echo esc_attr( $i++); ?></td>
-                                    <td><a href="<?php echo "admin.php?page=quiz-expert-edit-quiz&edit=".$value['quiz_id']); ?>" class="row-title"><?php echo wp_kses_post( $post_title); ?></a></td>
+                                    <td><a href="<?php echo esc_url("admin.php?page=quiz-expert-edit-quiz&edit=".$value['quiz_id']); ?>" class="row-title"><?php echo wp_kses_post( $post_title); ?></a></td>
 									<td><?php echo wp_kses_post( $em_type); ?></td>
                                     <td>[quiz_expert id=<?php echo wp_kses_post( $value['quiz_id']); ?>]</td>
                                     <td>
-                                        <a class="button" href="<?php echo "admin.php?page=quiz-expert-edit-quiz&edit=".$value['quiz_id']); ?>">Edit</a>
+                                        <a class="button" href="<?php echo esc_url("admin.php?page=quiz-expert-edit-quiz&edit=".$value['quiz_id']); ?>">Edit</a>
                                         <a href="#TB_inline?width=600&height=550&inlineId=delete_exam_popup" title="Delete Question" class="thickbox" onclick="quexp_delete_exam_button(<?php echo esc_attr( $value['quiz_id']); ?>);"  style="text-decoration: none;"><span class="button">Delete</span></a></div>
                                     </td>
                                 </tr>
