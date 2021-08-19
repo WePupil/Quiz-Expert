@@ -47,15 +47,15 @@ $all_quiz = $wpdb->get_results(
 											$post_title=$post_value['post_title'];}
 
                                 ?>
-                                <input type="hidden" id="wp_post_id<?php echo esc_js( $value['quiz_id']); ?>" value="<?php echo esc_js( $wp_post_id); ?>">
-                                <tr id="quiz_row<?php echo esc_js( $value['quiz_id']); ?>">
-                                    <td class="column-author"><?php echo esc_js( $i++); ?></td>
-                                    <td><a href="admin.php?page=quiz-expert-edit-quiz&edit=<?php echo esc_js( $value['quiz_id']); ?>" class="row-title"><?php echo esc_js( $post_title); ?></a></td>
-									<td><?php echo esc_js( $em_type); ?></td>
-                                    <td>[quiz_expert id=<?php echo esc_js( $value['quiz_id']); ?>]</td>
+                                <input type="hidden" id="wp_post_id<?php echo esc_attr( $value['quiz_id']); ?>" value="<?php echo esc_attr( $wp_post_id); ?>">
+                                <tr id="quiz_row<?php echo esc_attr( $value['quiz_id']); ?>">
+                                    <td class="column-author"><?php echo esc_attr( $i++); ?></td>
+                                    <td><a href="admin.php?page=quiz-expert-edit-quiz&edit=<?php echo esc_attr( $value['quiz_id']); ?>" class="row-title"><?php echo esc_attr( $post_title); ?></a></td>
+									<td><?php echo esc_attr( $em_type); ?></td>
+                                    <td>[quiz_expert id=<?php echo esc_attr( $value['quiz_id']); ?>]</td>
                                     <td>
-                                        <a class="button" href="admin.php?page=quiz-expert-edit-quiz&edit=<?php echo esc_js( $value['quiz_id']); ?>">Edit</a>
-                                        <a href="#TB_inline?width=600&height=550&inlineId=delete_exam_popup" title="Delete Question" class="thickbox" onclick="quexp_delete_exam_button(<?php echo esc_js( $value['quiz_id']); ?>);"  style="text-decoration: none;"><span class="button">Delete</span></a></div>
+                                        <a class="button" href="admin.php?page=quiz-expert-edit-quiz&edit=<?php echo esc_attr( $value['quiz_id']); ?>">Edit</a>
+                                        <a href="#TB_inline?width=600&height=550&inlineId=delete_exam_popup" title="Delete Question" class="thickbox" onclick="quexp_delete_exam_button(<?php echo esc_attr( $value['quiz_id']); ?>);"  style="text-decoration: none;"><span class="button">Delete</span></a></div>
                                     </td>
                                 </tr>
                                 <?php

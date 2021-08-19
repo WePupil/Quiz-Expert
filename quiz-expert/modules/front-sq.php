@@ -17,15 +17,15 @@ foreach ($sq_details as $key => $sq_value) {
         $sq_answer=$sq_value['answer'];
         ?> 
 
-<h3><?php echo esc_js( $q_sl.". ".$sq_question )?></h3>
-<?php if($em_type == "Exam"){ ?><input type="text" class="regular-text" id="answer<?php echo esc_js( $q_sl) ?>"><?php } ?>
+<h3><?php echo esc_attr( $q_sl.". ".$sq_question )?></h3>
+<?php if($em_type == "Exam"){ ?><input type="text" class="regular-text" id="answer<?php echo esc_attr( $q_sl) ?>"><?php } ?>
 
-<input type="hidden" id="correct_answer<?php echo esc_js( $q_sl);?>" value="<?php echo esc_js( $sq_answer);?>">
+<input type="hidden" id="correct_answer<?php echo esc_attr( $q_sl);?>" value="<?php echo esc_attr( $sq_answer);?>">
 <?php if($em_type == "Exam"){ ?>
-    <div id="answer_div<?php echo esc_js( $q_sl);?>"></div><hr>
+    <div id="answer_div<?php echo esc_attr( $q_sl);?>"></div><hr>
 <?php } ?>
 <?php if($em_type == "Exercise"){ ?>
-    <div id="answer_div<?php echo esc_js( $q_sl);?>" style="text-color: #000000; border: #ececa3 ; background: #ececa3" onclick="quexp_show_answer_button(<?php echo esc_js( $q_sl);?>);">&nbsp;&nbsp; Show Answer</div>
+    <div id="answer_div<?php echo esc_attr( $q_sl);?>" style="text-color: #000000; border: #ececa3 ; background: #ececa3" onclick="quexp_show_answer_button(<?php echo esc_attr( $q_sl);?>);">&nbsp;&nbsp; Show Answer</div>
 <?php } ?>
 <?php
 }

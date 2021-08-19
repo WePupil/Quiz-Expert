@@ -27,34 +27,34 @@ foreach ($mcq_details as $key => $mcq_value) {
         $mcq_answer=$mcq_value['answer'];
        ;?> 
 
-<h3><?php echo esc_js( $q_sl.". ".$mcq_question);?></h3><br/>
+<h3><?php echo esc_attr( $q_sl.". ".$mcq_question);?></h3><br/>
 
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="A"><?php };?> A. <?php echo esc_js( $mcq_ansa);?></div>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="B"><?php };?> B. <?php echo esc_js( $mcq_ansb);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="A"><?php };?> A. <?php echo esc_attr( $mcq_ansa);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="B"><?php };?> B. <?php echo esc_attr( $mcq_ansb);?></div>
 <?php if ($mcq_ansc != ""){;?>
-<div ><?php if($em_type == "Exam"){ ;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl)?>[]" value="C"><?php };?> C. <?php echo esc_js( $mcq_ansc);?></div>
+<div ><?php if($em_type == "Exam"){ ;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl)?>[]" value="C"><?php };?> C. <?php echo esc_attr( $mcq_ansc);?></div>
 <?php } if ($mcq_ansd != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="D"><?php };?> D. <?php echo esc_js( $mcq_ansd);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="D"><?php };?> D. <?php echo esc_attr( $mcq_ansd);?></div>
 <?php } if ($mcq_anse != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="E"><?php };?> E. <?php echo esc_js( $mcq_anse);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="E"><?php };?> E. <?php echo esc_attr( $mcq_anse);?></div>
 <?php } if ($mcq_ansf != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="F"><?php };?> F. <?php echo esc_js( $mcq_ansf);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="F"><?php };?> F. <?php echo esc_attr( $mcq_ansf);?></div>
 <?php } if ($mcq_ansg != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="G"><?php };?> G. <?php echo esc_js( $mcq_ansg);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="G"><?php };?> G. <?php echo esc_attr( $mcq_ansg);?></div>
 <?php } if ($mcq_ansh != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="H"><?php };?> H. <?php echo esc_js( $mcq_ansh);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="H"><?php };?> H. <?php echo esc_attr( $mcq_ansh);?></div>
 <?php } if ($mcq_ansi != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="I"><?php };?> I. <?php echo esc_js( $mcq_ansi);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="I"><?php };?> I. <?php echo esc_attr( $mcq_ansi);?></div>
 <?php } if ($mcq_ansj != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_js( $q_sl);?>[]" value="J"><?php };?> J. <?php echo esc_js( $mcq_ansj);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="J"><?php };?> J. <?php echo esc_attr( $mcq_ansj);?></div>
 <?php };?>
-<input type="hidden" id="correct_answer<?php echo esc_js( $q_sl);?>" value="<?php echo esc_js( $mcq_answer);?>">
+<input type="hidden" id="correct_answer<?php echo esc_attr( $q_sl);?>" value="<?php echo esc_attr( $mcq_answer);?>">
 
 <?php if($em_type == "Exam"){;?>
-    <div id="answer_div<?php echo esc_js( $q_sl);?>"></div><hr>
+    <div id="answer_div<?php echo esc_attr( $q_sl);?>"></div><hr>
 <?php };?>
 <?php if($em_type == "Exercise"){;?>
-    <div id="answer_div<?php echo esc_js( $q_sl);?>" style="text-color: #000000; border: #ececa3 ; background: #ececa3" onclick="quexp_show_answer_button(<?php echo esc_js( $q_sl);?>);">&nbsp;&nbsp;Show Answer</div>
+    <div id="answer_div<?php echo esc_attr( $q_sl);?>" style="text-color: #000000; border: #ececa3 ; background: #ececa3" onclick="quexp_show_answer_button(<?php echo esc_attr( $q_sl);?>);">&nbsp;&nbsp;Show Answer</div>
 <?php };?>
 
 
