@@ -27,26 +27,26 @@ foreach ($mcq_details as $key => $mcq_value) {
         $mcq_answer=$mcq_value['answer'];
        ;?> 
 
-<h3><?php echo esc_attr( $q_sl.". ".$mcq_question);?></h3><br/>
+<h3><?php echo wp_kses_post( $q_sl.". ".$mcq_question);?></h3><br/>
 
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="A"><?php };?> A. <?php echo esc_attr( $mcq_ansa);?></div>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="B"><?php };?> B. <?php echo esc_attr( $mcq_ansb);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="A"><?php };?> A. <?php echo wp_kses_post( $mcq_ansa);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="B"><?php };?> B. <?php echo wp_kses_post( $mcq_ansb);?></div>
 <?php if ($mcq_ansc != ""){;?>
-<div ><?php if($em_type == "Exam"){ ;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl)?>[]" value="C"><?php };?> C. <?php echo esc_attr( $mcq_ansc);?></div>
+<div ><?php if($em_type == "Exam"){ ;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl)?>[]" value="C"><?php };?> C. <?php echo wp_kses_post( $mcq_ansc);?></div>
 <?php } if ($mcq_ansd != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="D"><?php };?> D. <?php echo esc_attr( $mcq_ansd);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="D"><?php };?> D. <?php echo wp_kses_post( $mcq_ansd);?></div>
 <?php } if ($mcq_anse != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="E"><?php };?> E. <?php echo esc_attr( $mcq_anse);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="E"><?php };?> E. <?php echo wp_kses_post( $mcq_anse);?></div>
 <?php } if ($mcq_ansf != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="F"><?php };?> F. <?php echo esc_attr( $mcq_ansf);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="F"><?php };?> F. <?php echo wp_kses_post( $mcq_ansf);?></div>
 <?php } if ($mcq_ansg != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="G"><?php };?> G. <?php echo esc_attr( $mcq_ansg);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="G"><?php };?> G. <?php echo wp_kses_post( $mcq_ansg);?></div>
 <?php } if ($mcq_ansh != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="H"><?php };?> H. <?php echo esc_attr( $mcq_ansh);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="H"><?php };?> H. <?php echo wp_kses_post( $mcq_ansh);?></div>
 <?php } if ($mcq_ansi != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="I"><?php };?> I. <?php echo esc_attr( $mcq_ansi);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="I"><?php };?> I. <?php echo wp_kses_post( $mcq_ansi);?></div>
 <?php } if ($mcq_ansj != ""){;?>
-<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="J"><?php };?> J. <?php echo esc_attr( $mcq_ansj);?></div>
+<div ><?php if($em_type == "Exam"){;?><input type="checkbox" name="chk_<?php echo esc_attr( $q_sl);?>[]" value="J"><?php };?> J. <?php echo wp_kses_post( $mcq_ansj);?></div>
 <?php };?>
 <input type="hidden" id="correct_answer<?php echo esc_attr( $q_sl);?>" value="<?php echo esc_attr( $mcq_answer);?>">
 

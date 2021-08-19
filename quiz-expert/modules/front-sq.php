@@ -17,7 +17,7 @@ foreach ($sq_details as $key => $sq_value) {
         $sq_answer=$sq_value['answer'];
         ?> 
 
-<h3><?php echo esc_attr( $q_sl.". ".$sq_question )?></h3>
+<h3><?php echo wp_kses_post( $q_sl.". ".$sq_question )?></h3>
 <?php if($em_type == "Exam"){ ?><input type="text" class="regular-text" id="answer<?php echo esc_attr( $q_sl) ?>"><?php } ?>
 
 <input type="hidden" id="correct_answer<?php echo esc_attr( $q_sl);?>" value="<?php echo esc_attr( $sq_answer);?>">

@@ -37,8 +37,8 @@ foreach ($post_details as $key => $post_value) {
 <input type="hidden" id="new_em_id" value="<?php echo esc_attr( $em_id); ?>">
 
 <div class="wrap">
-<h1 class="wp-heading-inline"><?php echo esc_attr( $post_title); ?></h1>
-<a href="post.php?post=<?php echo esc_attr( $wp_post_id); ?>&action=edit" class="page-title-action">Edit Title</a>
+<h1 class="wp-heading-inline"><?php echo wp_kses_post( $post_title); ?></h1>
+<a href="<?php echo esc_url("post.php?post=<?php".$wp_post_id); ?>&action=edit" class="page-title-action">Edit Title</a>
 <hr class="wp-header-end">
 <div class="landing-body">
 <div style="display: inline-block; width:70%; float: left;">

@@ -22,11 +22,13 @@ foreach ($em_details as $key => $em_value) {
 ?>
 <div id="allcontents">
 <?php if($em_type == "Exam"  && $em_time > 0){ ?>
-    <div class="clock" id="clock"></div>
+<div class="clock" id="clock"></div>
 <?php } ?>
 <?php if($em_type == "Exam"){ ?>
     <h2 id="score_div"></h2>
 <?php } ?>
+
+
 <br/>
 <?php
 $q_details = $wpdb->get_results(

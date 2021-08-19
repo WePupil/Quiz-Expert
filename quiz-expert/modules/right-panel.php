@@ -9,14 +9,14 @@
 
 <div class="embox">
 <div class="em-q">Short Code</div><hr>
-<code>[quiz_expert id=<?php echo esc_attr( $em_id);?>]</code>
+<code>[quiz_expert id=<?php echo wp_kses_post( $em_id);?>]</code>
 </div>
 <br/>
 <div class="embox">
 <div class="em-q">Quiz Settings</div><hr><br/>
 Type:
 <select id="new_em_type">
-        <option value="<?php echo esc_attr( $em_type);?>"><?php echo esc_attr( $em_type);?></option>
+        <option value="<?php echo esc_attr( $em_type);?>"><?php echo wp_kses_post( $em_type);?></option>
         <option value="Exam">Exam</option>
         <option value="Exercise">Exercise</option>
 </select>

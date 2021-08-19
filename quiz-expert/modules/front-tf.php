@@ -16,7 +16,7 @@ foreach ($tf_details as $key => $tf_value) {
         $tf_answer=$tf_value['answer'];
         ?> 
 
-<h3><?php echo esc_attr( $q_sl.". ".$tf_question );?></h3>
+<h3><?php echo wp_kses_post( $q_sl.". ".$tf_question );?></h3>
 <?php if($em_type == "Exam"){ ?><select id="answer<?php echo esc_attr( $q_sl); ?>">
                             <option value="True">True</option>
                             <option value="False">False</option>
