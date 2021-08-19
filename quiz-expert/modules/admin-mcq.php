@@ -28,7 +28,7 @@ foreach ($mcq_details as $key => $mcq_value) {
         ?> 
 <br/>
 <div class="embox" id="q_box<?php echo esc_attr( $q_id);?>">
-<div class="em-q"><?php echo wp_kses_post( $q_sl.". ");?><a id="qname_mcq_val<?php echo esc_attr( $mcq_id);?>" style="color:#393939"><?php echo wp_kses_post(( $mcq_question )?></a>&nbsp;&nbsp;
+<div class="em-q"><?php echo wp_kses_post( $q_sl.". ");?><a id="qname_mcq_val<?php echo esc_attr( $mcq_id);?>" style="color:#393939"><?php echo wp_kses_post($mcq_question )?></a>&nbsp;&nbsp;
 <a href="#TB_inline?width=600&height=550&inlineId=edit_question_popup" title="Edit Question" class="thickbox" onclick="quexp_edit_mcq_question_button(<?php echo esc_attr( $mcq_id); ?>);"  style="text-decoration: none;"><span class="page-title-action">Edit</span></a>
 <a href="#TB_inline?width=600&height=550&inlineId=delete_question_popup" title="Delete Question" class="thickbox" onclick="quexp_delete_question_button(<?php echo esc_attr( $q_id); ?>);"  style="text-decoration: none;"><span class="page-title-action">Delete</span></a></div>
 <br/><div id="mcq_answer_option<?php echo esc_attr( $mcq_id);?>">
